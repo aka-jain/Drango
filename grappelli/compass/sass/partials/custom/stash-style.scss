@@ -1,0 +1,121 @@
+@font-face {
+    font-family: mons-reg;
+    src: url(../fonts/Montserrat-Regular.otf)
+}
+@font-face {
+    font-family: mons-lig;
+    src: url(../fonts/Montserrat-Light.otf)
+}
+@font-face {
+    font-family: mons-hair;
+    src: url(../fonts/Montserrat-Hairline.otf)
+}
+.grp-login{
+	background: #292929;
+}
+.stash-login-form{
+	i{
+		position: absolute;
+    right: 5px;
+    top: 4px;
+    color: #9d9d9d;
+	}
+	color: #d4d4d4;
+	font-family: 'mons-reg', sans-serif;
+	span.admin-title{
+		margin-left: 0px;
+	}
+	p.tagline{
+		font-family: 'mons-hair';
+		font-size: 16px;
+		color: #c2c2c2;
+
+	}
+	.main-form{
+		.form-row{
+			position: relative;
+			margin: 18px 0px;
+		}
+		.errorlist{
+			color: #f3297b;
+			font-family: 'mons-lig';
+		}
+		.grp-errors input{
+			border-color: #f9f9f9 !important;
+		}
+		margin-top: 20px;
+		input{
+			outline: none;
+			background-color: rgba(0,0,0,0);
+			box-shadow: 0px 0px;
+		    border: 0px;
+		    border-bottom: 1px solid #9d9d9d;
+		    border-radius: 0px;
+		    padding-left: 0px;
+		    padding-right: 20px;
+		    padding-bottom: 10px;
+		    font-size: 14px;
+		    color: #fff;
+		    transition:all 0.2s ease-in-out;
+		}
+
+		// .line{
+		// 	position: absolute;
+		// 	left: 0px;
+		// 	bottom: 0px;
+		// 	background-color: #e4296c;
+		// 	height: 1px;
+		// 	width: 100px;
+		// 	transition: all 0.2s ease-in-out;
+		// }
+		input:focus{
+			border-bottom: 1px solid #f3297b;
+		}
+		::-webkit-input-placeholder {
+		   font-size: 12px;
+		   padding-left: 4px;
+		   font-family: 'mons-hair';
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+			font-size: 12px;
+		   font-family: 'mons-hair'; 
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+			font-size: 12px;
+		   font-family: 'mons-hair'; 
+		}
+
+		:-ms-input-placeholder {  
+			font-size: 12px;
+		   font-family: 'mons-hair'; 
+		}
+	}
+	input.stash-login-submit{
+		outline: none;
+	    width: 90px;
+	    height: 35px;
+	    border-radius: 33px !important;
+	    background-color: rgba(0,0,0,0);
+	    background-image: none;
+	    box-shadow: none;
+	    border: 1px solid #9d9d9d;
+	    transition: all 0.2s ease-in-out;
+	}
+	input.stash-login-submit:hover{
+		background-color: #f3297b;
+		border: 1px solid #f3297b;
+
+	}
+	li.list-submit-stash{
+	    float: left !important;
+		margin-left: 0;
+	}
+
+
+}
+.love-line{
+		position: absolute;
+		bottom: 20px;
+	}
