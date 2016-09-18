@@ -20,6 +20,9 @@ Change URL Patterns for Stash admin as
 
 And login to localhost:8000/admin/
 
+#Dashboard snapshot
+<img src="images/Stash/images/Screen Shot 1938-06-27 at 12.59.50 PM.png">
+
 #Credits
 https://github.com/sehmaschine/django-grappelli
 
