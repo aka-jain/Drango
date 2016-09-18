@@ -9,6 +9,7 @@ Stash is a customize theme for Grappelli (Material Design). It has a beautiful U
 3. Ajax implementations
 4. Charts for apps representations
 5. Icon rich UI
+6. Filters for Site Admnistration Page
 
 #Credits
 https://github.com/sehmaschine/django-grappelli
