@@ -183,7 +183,7 @@
                             <!-- SEARCH -->
                             {% if cl.search_fields %}
                                 {% block search %}
-                                    <div id="search" class="g-d-6 g-d-f">
+                                    <div id="search" class="">
                                         {% search_form cl %}
                                     </div>
                                 {% endblock %}
@@ -244,9 +244,9 @@
         <!-- PAGINATION BOTTOM -->
         {% if not cl.result_count == 0 %}
             {% block pagination_bottom %}
-                <div class="grp-module">
+               <!--  <div class="grp-module">
                     <div class="grp-row">{% pagination cl %}</div>
-                </div>
+                </div> -->
             {% endblock %}
         {% endif %}
         <!-- SUBMIT ROW -->

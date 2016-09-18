@@ -1,14 +1,14 @@
 @font-face {
     font-family: mons-reg;
-    src: url(../fonts/Montserrat-Regular.otf)
+    src: url(../fonts/Montserrat-Regular.otf);
 }
 @font-face {
     font-family: mons-lig;
-    src: url(../fonts/Montserrat-Light.otf)
+    src: url(../fonts/Montserrat-Light.otf);
 }
 @font-face {
     font-family: mons-hair;
-    src: url(../fonts/Montserrat-Hairline.otf)
+    src: url(../fonts/Montserrat-Hairline.otf);
 }
 a{	transition: all 0.2s ease-in-out;
 	color: #dcdcdc;
@@ -127,6 +127,7 @@ a:hover{
 		position: absolute;
 		bottom: 20px;
 		color: #9d9d9d;
+		top: 150%;
 	}
 h1.stash-header{
 	font-size: 18px !important;
@@ -183,7 +184,10 @@ h1.stash-header{
 	box-shadow: 0 0 0;
 	background-color: transparent !important;
 }
-
+.action-checkbox-column{
+	background-color: #292929;
+            padding: 4px 10px;
+}
 
 // dashboard styling
 
