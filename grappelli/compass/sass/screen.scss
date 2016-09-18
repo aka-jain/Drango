@@ -37,7 +37,7 @@ $experimental-support-for-svg: true;
 @import "partials/layout/filebrowser";
 
 @import "partials/custom/jquery-ui";
-@import "partials/custom/stash-style";
+
 
 
 
@@ -57,7 +57,7 @@ body {
     @extend .grp-font-family;
     @extend .grp-font-size;
     @extend .grp-line-height;
-    background: #fff;
+    background: #181818;
     overflow: visible;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -83,9 +83,12 @@ body.grp-login {
     #grp-context-navigation, 
     #grp-content-title {
         display: none;
+        
+    
     }
     #grp-content {
         top: 140px;
+        padding: 0px 80px;
     }
     .grp-module-login {
         border: 0 !important;
@@ -142,7 +145,7 @@ body.grp-login {
             }
         }
         .grp-module {
-            border: $grp-module-border;
+            // border: $grp-module-border;
             border-top: 1px solid #f6f6f6;
             @include border-top-radius(0);
             .grp-row {
@@ -226,13 +229,17 @@ header#grp-header {
     float: left;
     clear: both;
     width: 100%;
+    box-shadow: 0px 0px 8px #131313;
+
     @include box-sizing(border-box);
     #grp-navigation {
         position: relative;
         float: left;
         clear: both;
         width: 100%;
-        padding: 0 20px;
+        padding: 10px 80px;
+        background: #292929 !important;
+        box-shadow: 0px 0px 4px #000;
         @include box-sizing(border-box);
         @include grp-gradient-dark;
         @include clearfix;
@@ -253,7 +260,7 @@ header#grp-header {
             line-height: 16px;
         }
         a {
-            color: lighten($grp-link-color, 10);
+            // color: lighten($grp-link-color, 10);
             &:hover {
                 color: #fff;
             }
@@ -330,7 +337,7 @@ header#grp-header {
     float: left;
     clear: both;
     top: 80px;
-    padding: 0 20px 120px;
+    padding: 0 80px 120px 80px;
     width: 100%;
     @include box-sizing(border-box);
 }
@@ -353,8 +360,8 @@ body.grp-change-form #grp-content-container > form > div {
     width: 100%;
     font-weight: bold;
     @include box-sizing(border-box);
-    border-bottom: 1px solid $grp-context-navigation-border-color;
-    background: $grp-context-navigation-background-color;
+    // border-bottom: 1px solid $grp-context-navigation-border-color;
+    background: #292929;
 }
 #grp-context-navigation {
     @include grp-context-navigation;
@@ -362,13 +369,19 @@ body.grp-change-form #grp-content-container > form > div {
 
 @mixin grp-breadcrumbs {
     float: left;
+    width: 100%;
+    padding: 0px 80px;
+    color: #9d9d9d;
     > ul {
         @include horizontal-list(5px, left);
-        @include grp-padding($grp-padding-size-s 20px);
-        text-shadow: 0 1px 0 #f5f5f5;
+        display: inline-block;
+        color: #f3297b;
+        @include grp-padding($grp-padding-size-s 12px);
+        // text-shadow: 0 1px 0 #f5f5f5;
         a {
             display: block;
             padding-right: 15px;
+
             @include icons-sprite(breadcrumbs, $offset-x: 100%);
             &:hover {
                 @include icons-sprite(breadcrumbs_hover, $offset-x: 100%);
@@ -558,7 +571,7 @@ body.grp-popup {
     }
 }
 
-
+@import "partials/custom/stash-style";
 
 /*  MOBILE DEVICES
 ------------------------------------------------------------------------------------------------------ */

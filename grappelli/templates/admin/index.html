@@ -26,8 +26,8 @@
 
 <!-- CONTENT -->
 {% block content %}
-    <div class="g-d-c">
-        <div class="g-d-12 g-d-f">
+    <div class="row">
+        <div class="col-sm-9 col-xs-12">
             {% for app in app_list %}
                 <div class="grp-module" id="app_{{ app.name|lower }}">
                     <h2><a href="{{ app.app_url }}" class="grp-section">{% trans app.name %}</a></h2>
@@ -66,16 +66,16 @@
                 {% endif %}
             {% endblock %}
         </div>
-        <div class="g-d-6 g-d-l">
-            <div class="grp-module" id="grp-recent-actions-module">
-                <h2>{% trans 'Recent Actions' %}</h2>
-                <div class="grp-module">
-                    <h3>{% trans 'My Actions' %}</h3>
+        <div class="col-sm-3 col-xs-12">
+            <div class="grp-module grp-module-recent" id="grp-recent-actions-module">
+                <h2 class="grp-module-recent">{% trans 'Recent Actions' %}</h2>
+                <div class="grp-module grp-module-recent">
+                    
                     {% get_admin_log 10 as admin_log for_user user %}
                     {% if not admin_log %}
                         <div class="grp-row"><p>{% trans 'None available' %}</p></div>
                     {% else %}
-                        <ul class="grp-listing-small">
+                        <ul class="grp-listing-small ">
                             {% for entry in admin_log %}
                                 <li class="grp-row{% if entry.is_addition %} grp-add-link{% endif %}{% if entry.is_change %} grp-change-link{% endif %}{% if entry.is_deletion %} grp-delete-link{% endif %}">
                                     {% if entry.is_deletion %}

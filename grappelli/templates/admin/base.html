@@ -8,6 +8,10 @@
     {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
     <!-- STYLESHEETS -->
     {% block stylesheets %}
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <link href="{% static "grappelli/jquery/ui/jquery-ui.min.css" %}" rel="stylesheet" type="text/css" media="screen" />
         <link href="{% static "grappelli/stylesheets/screen.css" %}" rel="stylesheet" type="text/css" media="all" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -23,6 +27,8 @@
     {% block extrastyle %}{% endblock %}
     <!-- JAVASCRIPTS -->
     {% block javascripts %}
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "grappelli/" %}{% endfilter %}";</script>
         <script type="text/javascript">window.__admin_utc_offset__ = "{% filter escapejs %}{% now "Z" %}{% endfilter %}";</script>
         <script type="text/javascript" charset="utf-8">
@@ -91,26 +97,29 @@
                         <!-- NAVIGATION -->
                         <div id="grp-navigation">
                             {% block branding %}{% endblock %}
-                            {% block admin_title %}<h1 id="grp-admin-title">{% if grappelli_admin_title %}{{ grappelli_admin_title }}{% else %}{% get_admin_title %}{% endif %}</h1>{% endblock %}
+                            {% block admin_title %}<h1 id="grp-admin-title" class="stash-header"><!-- {% if grappelli_admin_title %}{{ grappelli_admin_title }}{% else %}{% get_admin_title %}{% endif %} -->
+                                Stash
+                            </h1>{% endblock %}
                             {% block user-tools %}
                                 {% if user.is_authenticated and user.is_staff %}
-                                    <ul id="grp-user-tools">
+                                    <ul id="grp-user-tools" class="stash-user">
                                         <!-- Userlinks -->
                                         {% block userlinks %}
                                             <!-- Username -->
-                                            <li class="grp-user-options-container grp-collapse grp-closed {% if request.session.original_user %}grp-switch-user-is-target{% endif %}">
-                                                <a href="javascript://" class="user-options-handler grp-collapse-handler {% if request.session.original_user %}grp-switch-user-is-target{% else %}grp-switch-user-is-original{% endif %}">{% firstof user.get_short_name user.get_username %}</a>
-                                                <ul class="grp-user-options">
-                                                    <!-- Change Password -->
+                                            <li class="stash-user  ">
+                                                <a  class="">Hi {% firstof user.get_short_name user.get_username %} &#x1F60A;</a>
+                                                
+                                                    
+                                               
+                                            </li>
+                                            <!-- Change Password -->
                                                     {% if user.has_usable_password %}
-                                                        <li><a href="{% url 'admin:password_change' %}" class="grp-change-password">{% trans 'Change password' %}</a></li>
+                                                        <li class="stash-user stash-user-link"><a href="{% url 'admin:password_change' %}" class="grp-change-password">{% trans 'Change password' %} <i class="fa fa-key"></i></a></li>
                                                     {% endif %}
                                                     <!-- Logout -->
-                                                    <li><a href="{% url 'admin:logout' %}" class="grp-logout">{% trans 'Log out' %}</a></li>
+                                                    <li class="stash-user stash-user-link"><a href="{% url 'admin:logout' %}" class="grp-logout">{% trans 'Log out' %} <i class="fa fa-sign-out"></i></a></li>
                                                     <!-- Switch -->
                                                     {% switch_user_dropdown %}
-                                                </ul>
-                                            </li>
                                             <!-- Site URL -->
                                             {% if site_url %}
                                                 <li><a href="{{ site_url }}">{% trans 'View site' %}</a></li>
@@ -134,9 +143,10 @@
                         <div id="grp-context-navigation">
                             <nav id="grp-breadcrumbs" class="{% block breadcrumbs-class %}{% endblock %}">
                                 <header style="display:none"><h1>Breadcrumbs</h1></header>
+                                 <span class="stash-here">You are here:</span>
                                 {% block breadcrumbs %}
-                                    <ul>
-                                        <li><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
+                                   <ul>
+                                        <li><a href="{% url 'admin:index' %}">{% trans '' %}</a></li>
                                         {% if title %}
                                             <li> &rsaquo; {{ title }}</li>
                                         {% endif %}
@@ -170,9 +180,9 @@
             {% endblock %}
 
             <!-- CONTENT TITLE -->
-            <header id="grp-content-title">
+            <header id="grp-content-title" class="stash-title-head">
                 {% block pretitle %}{% endblock %}
-                {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+                {% block content_title %}{% if title %}<h1 >{{ title }}</h1>{% endif %}{% endblock %}
                 {% block object-tools %}{% endblock %}
             </header>
 
@@ -190,6 +200,6 @@
         {% block footer %}{% endblock %}
 
     </div>
-    
+
 </body>
 </html>

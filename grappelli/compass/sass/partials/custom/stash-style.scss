@@ -10,15 +10,23 @@
     font-family: mons-hair;
     src: url(../fonts/Montserrat-Hairline.otf)
 }
+a{	transition: all 0.2s ease-in-out;
+	color: #dcdcdc;
+	text-decoration: none;
+}
+a:hover{
+	color: #f3297b;
+	text-decoration: none;
+}
 .grp-login{
-	background: #292929;
+	background: #181818;
 }
 .stash-login-form{
 	i{
 		position: absolute;
-    right: 5px;
-    top: 4px;
-    color: #9d9d9d;
+	    right: 5px;
+	    top: 4px;
+	    color: #9d9d9d;
 	}
 	color: #d4d4d4;
 	font-family: 'mons-reg', sans-serif;
@@ -118,4 +126,66 @@
 .love-line{
 		position: absolute;
 		bottom: 20px;
+		color: #9d9d9d;
 	}
+h1.stash-header{
+	font-size: 18px !important;
+	font-family: 'mons-Lig';
+}
+.stash-user{
+	border: 0px !important;
+	color: #fff;
+	li{
+		margin-right: 10px;
+	}
+	
+	
+	a, a:hover{
+		transition: all 0.2s ease-in-out;
+		color: #f3297b !important;
+		
+	}
+
+}
+.stash-user-link{
+	border: 0px !important;
+	// color: #fff;
+	a{
+		transition: all 0.2s ease-in-out;
+		color: #dcdcdc !important;
+	}
+	i{		transition: all 0.2s ease-in-out;
+			color: #dcdcdc;
+		}
+
+	a:hover{
+		color: #f3297b !important;
+		i{
+			color: #fff;
+		}
+	}
+}
+.stash-here{
+	float: left;
+    padding-top: 5px;
+    li{
+
+    }
+}
+.stash-title-head h1{
+	font-size: 14px;
+    color: #9d9d9d;
+    font-family: 'mons-lig';
+    margin: 10px 0px;
+
+}
+.grp-module-recent{
+	box-shadow: 0 0 0;
+	background-color: transparent !important;
+}
+
+
+// dashboard styling
+
+
+
