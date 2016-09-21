@@ -1,7 +1,7 @@
 # Drango
 Easy to use Django admin interface.
 
-Drango is a customize theme for Grappelli (Material Design). It has a beautiful UI with good user experience. 
+Drango is a customize theme for Grappelli (Material Design). It has a beautiful UI dark theme with good user experience that makes the data upload work enjoyable.
 
 #Features
 1. Awesome and minimal UI
@@ -25,4 +25,6 @@ And login to localhost:8000/admin/
 
 #Credits
 https://github.com/sehmaschine/django-grappelli
+
+#Note: this project is under development. And it's first version will released soon :)
 
