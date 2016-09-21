@@ -3,7 +3,7 @@ Easy to use Django admin interface.
 
 Drango is a customize theme for Grappelli (Material Design). It has a beautiful UI dark theme with good user experience that makes the data upload work enjoyable.
 
-#Features
+#Features(Upcoming)
 1. Awesome and minimal UI
 2. Fully Responsive
 3. Ajax implementations
@@ -12,19 +12,26 @@ Drango is a customize theme for Grappelli (Material Design). It has a beautiful 
 6. Filters for Site Admnistration Page
 
 #SetUp
-For now you have to download the Drango into your django project.
-Then paste "Drango" into your installed app in setting.py.
-Change URL Patterns for Stash admin as 
-  url(r'^Drango/', include('grappelli.urls')), # Drango URLS
+For now you have to download the this Grappelli directory into your Django project.
+Then paste "Grappelli" into your installed app in setting.py (same as we do for Grappelli https://github.com/sehmaschine/django-grappelli )<br>
+Change URL Patterns for your admin same as we do for Grappelli<br>
+  url(r'^grappelli/', include('grappelli.urls')), <br>
   url(r'^admin/', include(admin.site.urls)),
 
-And login to localhost:8000/admin/
+And login to localhost:8000/admin/ :^)
 
-#Dashboard snapshot
-<img src="/images/Screen Shot 1938-06-27 at 12.59.50 PM.png">
+#Login Design
+<img src="https://github.com/aka-jain/Drango/blob/master/images/Login.png?raw=true">
+
+#Site Admin Design
+<img src="https://github.com/aka-jain/Drango/blob/master/images/Site_Admin.png?raw=true">
+
+#List View Design
+<img src="https://github.com/aka-jain/Drango/blob/master/images/List_View.png?raw=true">
 
 #Credits
 https://github.com/sehmaschine/django-grappelli
 
-#Note: this project is under development. And it's first version will released soon :)
+#Note
+This project is under development. And for now it is based on Grappelli.Soon it will be released as an independent plugin. Till then have a happy uploading work :^D
 
