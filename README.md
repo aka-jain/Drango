@@ -1,5 +1,5 @@
 # Drango 
-Dracula + Django :D
+Dracula + Django :D <br>
 Easy to use Django admin interface.
 
 Drango is a customize theme for Grappelli (Material Design). It has a beautiful UI dark theme with good user experience that makes the data upload work enjoyable.
